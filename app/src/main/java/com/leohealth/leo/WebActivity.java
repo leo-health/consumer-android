@@ -21,6 +21,8 @@ public class WebActivity extends Activity {
         myWebView.setWebViewClient(new WebViewClient());
         myWebView.loadUrl("http://lcw.ngrok.io");
         WebSettings settings = myWebView.getSettings();
+        settings.setLoadWithOverviewMode(true);
+        settings.setUseWideViewPort(true);
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
